@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa Situação da Turma</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        main{
+            margin-left: 1em;
+        }
+
+        h1{
+            margin-top: 1em;
+            margin-bottom: 1em;
+        }
+
+        hr{
+            margin-top: -1rem;
+            margin-bottom: 1rem;
+        }
+
+        .content{
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+        }
+
+        .input1{
+            margin: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .input2{
+            margin: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .input3{
+            margin: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        button{
+            margin-top: 1em;
+            margin-bottom: 1em;
+        }
+
+    </style>
+</head>
+<body>
+
+    <main>
+    <h1>Programa Situação da Turma</h1>
+    <hr>
+
+    <div class="container">
+    <div class="input1">
+        <label for="nomeAluno">Nome Aluno(a):</label> 
+        <input type="text" id="nomeAluno" name="nomeAluno">
+    </div>
+
+    <div class="input2">
+        <label for="nota1">1° Nota:</label> 
+        <input type="number" id=" nota1" name="nota1">
+    </div>
+
+    <div class="input3">
+        <label for="nota2">2° Nota:</label> 
+        <input type="number" id="nota2" name="nota2">
+    </div>
+
+    <button onclick="media()" id="adicionar">Exibir média Aluno</button>
+    <button  onclick="media()" id="ordenar">Exibir média da Turma</button>
+
+    </div>
+    </main>
+
+    <script>
+        function media(){
+        var nota1 = parseFloat(document.getElementById("nota1").value);
+        var nota2 = parseFloat(document.getElementById("nota2").value);
+
+        var media = (nota1 + nota2)/2 ;
+        console.log (media)
+
+        if(media >= 7)
+        if(media==10)
+        alert("Parabéns ${nomeAluno}! Você foi aprovado(a)!");
+        else
+        alert("Atenção ${nomeAluno}, você está em recuperação"+media);
+        else
+       alert("Ops ${nomeAluno}, você foi reprovado.")
+    } 
+    
+    </script>
+</body>
+</html>
